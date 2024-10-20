@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Join Priya's Multi Fitness World for diverse fitness programs tailored to all levels.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priya's Multi Fitness World</title>
     <style>
@@ -14,41 +15,99 @@
         }
 
         header {
-            background-color: #a9cdf1;
             color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.6);
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 20px;
+    text-align: center;
+    
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    animation: slideDown 5s ease-out forwards; /* Add this to your existing h1 styles */
+}
+
 
         nav {
             margin: 20px 0;
             text-align: center;
         }
-
+        
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             font-weight: bold;
         }
+        nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-        .hero {
-            background-image: url(fit.jpg);
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgb(226, 56, 218);
-            text-align: center;
-        }
+@keyframes slide {
+    0% {
+        background-position: -100% center; /* Start off the left */
+    }
+    100% {
+        background-position: 100% center; /* Move to the right */
+    }
+}
 
+.hero {
+    background-image: url(fit.jpg);
+    height: 400px;
+    background-size: auto 100%; /* Adjusts the image height while allowing it to repeat horizontally */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-position: 0 center; /* Start position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(226, 56, 218);
+    text-align: center;
+    animation: slide 43s linear infinite; /* Animation for movement */
+}
         .hero h1 {
             font-size: 3.5em;
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.5);
         }
+
+        @media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+}
+
+nav a:hover {
+    background-color: #2980b9;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
 
         .container {
             padding: 40px;
@@ -82,11 +141,13 @@
 
         .service {
             background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 30%;
-            margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service img {
@@ -127,6 +188,30 @@
             box-sizing: border-box;
         }
 
+        .social-media {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%; /* Optional: rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add a hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
         iframe {
             width: 100%;
             height: 300px;
@@ -135,10 +220,11 @@
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+            background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Courier New', monospace;
         }
     </style>
 </head>
@@ -152,7 +238,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+  <section class="hero">
         <h1>Fitness for a Better You!</h1>
     </section>
 
@@ -168,7 +254,7 @@
                 <div class="service">
                     <img src="aero.jpg" alt="Aerobics">
                     <h3>Aerobics</h3>
-                    <p>A high-energy class that focuses on cardio vascular fitness.</p>
+                    <p>A high-energy class that focuses on cardiovascular fitness.</p>
                 </div>
                 <div class="service">
                     <img src="strech.jpg" alt="Stretching">
@@ -209,7 +295,7 @@
         </section>
 
         <div class="timing">
-            <p><strong>Batch Timings:</strong> Morning: 6:00 AM - 8:00 AM || Evening: 5:00 PM - 7:00 PM</p>
+            <p><strong>Batch Timings:</strong> Morning: 6:00 AM - 8:00 AM | Evening: 5:00 PM - 7:00 PM</p>
             <p>Personal Training Available</p>
         </div>
 
@@ -219,6 +305,23 @@
             <p>Email: priya@multifitnessworld.com | Phone No: 7998997111</p>
             <p>Location: Shahu Stadium, Satara</p>
         </section>
+        <br><br>
+        <section class="social-media" id="social-media">
+            <h2 class="section-title">Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <img src="insta.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://wa.me/7998997111" target="_blank">
+                    <img src="what.png" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://www.youtube.com/yourchannel" target="_blank">
+                    <img src="you.png" alt="YouTube" class="social-icon">
+                </a>
+            </div>
+        </section>
+        
+      
         <br><br>
         <section class="emap" id="emap">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.029201742156!2d74.00115217421688!3d17.696080593840836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2397ef8baf761%3A0x511d80c4df856d6c!2sSatara%20shahu%20stadium!5e0!3m2!1sen!2sin!4v1728896548233!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
