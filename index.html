@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Join Priya's Multi Fitness World for diverse fitness programs tailored to all levels.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=6.0">
     <title>Priya's Multi Fitness World</title>
     <style>
+        html{
+        
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f3f3f3;
             color: #333;
+            height: -webkit-fill-available;
         }
 
         header {
@@ -83,14 +88,14 @@ header h1 {
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.5);
         }
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 600px) {
             .service {
-        width: 80%; /* Make service cards wider on mobile */
-        margin: 10px auto; /* Center the cards */
-        padding: 75%; /* Add more padding for a larger appearance */
+        width: 75%; /* Make service cards wider on mobile */
+        margin: 0 auto; /* Center the cards */
+        padding: 95%; /* Add more padding for a larger appearance */
     }
 
-    .service h3 {
+   .service h3 {
         font-size: 1.5em; /* Increase heading size */
     }
 
@@ -100,8 +105,13 @@ header h1 {
     .services-grid {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        
     }
-
+    .service img {
+    max-width: 100%;
+    height: auto;
+}
     .service {
         width: 90%;
     }
@@ -154,7 +164,7 @@ nav a:hover {
 
         .service {
             background-color: #ecf0f1;
-    padding: 20px;
+    padding: 70px;
     border-radius: 10px;
     text-align: center;
     width: 30%;
@@ -209,7 +219,7 @@ nav a:hover {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between icons */
+    gap: 10px; /* Space between icons */
 }
 
 .social-icon {
@@ -265,7 +275,7 @@ nav a:hover {
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service">
-                    <img src="aero.jpg" alt="Aerobics">
+                    <img src="aero.jpg" alt="Aerobics" loading="lazy">
                     <h3>Aerobics</h3>
                     <p>A high-energy class that focuses on cardiovascular fitness.</p>
                 </div>
@@ -312,10 +322,19 @@ nav a:hover {
             <p>Personal Training Available</p>
         </div>
 
+        
+    <h2 class="section-title">What Our Members Say</h2>
+    <div class="testimonial">
+        <p>"Priya's fitness classes changed my life! I've lost 10kg and feel stronger than ever."</p>
+        <p><strong>- Niikam</strong></p>
+    </div>
+
+
+
         <section class="contact" id="contact">
             <h2 class="section-title">Contact Us</h2>
             <p>Contact Priya Madam (Certified Fitness Trainer, Diet & Nutrition Specialist)</p>
-            <p>Email: priya@multifitnessworld.com | Phone No: 7998997111</p>
+            <p>Email: priya@multifitnessworld.com | Phone No: 791</p>
             <p>Location: Shahu Stadium, Satara</p>
         </section>
         <br><br>
@@ -325,7 +344,7 @@ nav a:hover {
                 <a href="https://www.instagram.com/yourprofile" target="_blank">
                     <img src="insta.png" alt="Instagram" class="social-icon">
                 </a>
-                <a href="https://wa.me/7998997111" target="_blank">
+                <a href="https://wa.me/11" target="_blank">
                     <img src="what.png" alt="WhatsApp" class="social-icon">
                 </a>
                 <a href="https://www.youtube.com/yourchannel" target="_blank">
